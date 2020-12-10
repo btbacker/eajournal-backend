@@ -1,0 +1,2 @@
+class JournalEntriesEmotionsController < ApplicationController
+end

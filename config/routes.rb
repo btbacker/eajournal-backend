@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :journal_entries_tags
+  resources :journal_entries_emotions
   resources :tags
   resources :emotions
   resources :journal_entries
