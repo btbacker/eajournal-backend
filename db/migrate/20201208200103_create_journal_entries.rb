@@ -1,12 +1,9 @@
 class CreateJournalEntries < ActiveRecord::Migration[6.0]
   def change
     create_table :journal_entries do |t|
-      t.string :user_id
-      t.string :integer
-      t.string :emotion_id
-      t.string :integer
-      t.string :tag_id
-      t.string :integer
+      t.integer :user_id
+      t.integer :emotion_id
+      t.integer :tag_id
 
       t.timestamps
     end

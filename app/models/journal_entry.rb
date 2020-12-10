@@ -1,5 +1,5 @@
 class JournalEntry < ApplicationRecord
     belongs_to :user
-    has_and_belongs_to_many :tag
-    has_and_belongs_to_many :emotion
+    has_many :emotions, through: :journal_entries_emotions
+    has_many :tags, through: :journal_entries_tags
 end
