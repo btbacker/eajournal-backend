@@ -41,7 +41,7 @@ class JournalEntriesController < ApplicationController
 
     private
     def journal_entry_params
-        params.require(:journal_entry)
+        params.require(:journal_entry).permit(:entry, :user_id)
     end
 
     def find_journal_entry
