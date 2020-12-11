@@ -24,9 +24,8 @@ ActiveRecord::Schema.define(version: 2020_12_10_003009) do
   end
 
   create_table "journal_entries", force: :cascade do |t|
+    t.string "entry"
     t.integer "user_id"
-    t.integer "emotion_id"
-    t.integer "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -52,9 +51,9 @@ ActiveRecord::Schema.define(version: 2020_12_10_003009) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
+    t.string "name"
     t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
